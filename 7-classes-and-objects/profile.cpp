@@ -19,12 +19,11 @@ std::string Profile::view_profile() {
   bio += "\nAge: " + std::to_string(age);
   bio += "\nPronouns: " + pronouns;
   std::string hobby_string = "Hobbies:\n";
-
-  for (std::string hobby : hobbies) {
-
-    hobby_string += " - " + hobby + "\n";
-
-  }
+  
+  for (int i=0; i < hobbies.size(); i++)
+    {
+        hobby_string += " - " + hobbies[i] + "\n";
+    }
 
   return bio + "\n" + hobby_string;
 
